@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Wall Assignment - advanced version</title>
+    <body>
+        <div id="header">
+            <h3>CodingDojo Wall</h3>
+            <p>Welcome {{session['first_name']}}</p>
+            <form class="" action="/logout" method="post">
+                <input type="submit" name="" value="log off">
+            </form>
+        </div>
+
+        {% with messages = get_flashed_messages() %}
+           {% if messages %}
+               <div id="flash_message">
+                   {% for message in messages %}
+                       {{message}}
+                   {% endfor %}
+               </div>
+           {% endif %}
+       {% endwith %}
+        <div id="container">
+            <div class="posts">
+                <form action="/message" name="user_message" method="post">
+                    <h3>Post a message</h3><br>
+                    <textarea name="user_message" rows="8" cols="80"></textarea>
+                    <input type="submit" name="user_message" value="Post a message" class="btn btn-default navbar-btn">
+                </form>
+            </div>
+
+            <div id="wrapper">
+                {% for message in messages: %}
+                    <div class="posts">
+                        <h3>{{message['name']}} - {{message['date']}}</h3>
+                        <p>{{message['message']}}</p>
+
+                        <form class="" action="/comment/{{message['id']}}" method="post">
+                            <p>Post a comment</p>
+                            <textarea name="user_comment" rows="8" cols="80"></textarea>
+                            <input type="submit" name="user_comment" value="Post a comment">
+
+                            {% for comment in comments: %}
+                                {% if message['id'] == comment['message_id'] %}
+                                    <p>{{comment['name']}} - {{comment['date']}}</p>
+                                    <p>{{comment['comment']}}</p>
+                                {% endif %}
+                            {% endfor %}
+                        </form>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+
+
+
+
+    </body>
+</html>

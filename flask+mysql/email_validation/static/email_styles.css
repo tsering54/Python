@@ -1,0 +1,7 @@
+#flash_message{
+    display: inline-block;
+    background-color: red;
+    text-align: center;
+    padding: 10px;
+    align-self: center;
+}

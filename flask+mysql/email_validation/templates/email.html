@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Success Page</title>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'email_styles.css')}}">
+    </head>
+    <body>
+        <div id="email_wrapper">
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <div id="flash_message">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            <h4>Email Addresses Entered: </h4>
+            <div class="emails">
+                {% for email in all_emails: %}
+                    {{email['email']}}
+                    {{email['created_at']}}<br>
+                {% endfor %}
+            </div>
+        </div>
+    </body>
+</html>

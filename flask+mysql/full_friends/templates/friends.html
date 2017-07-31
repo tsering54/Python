@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Edit Page</title>
+    </head>
+    <body>
+        <form action="/friends/{{edit_friend['id']}}" method="post">
+            First Name: <input type="text" name="first_name" value="{{edit_friend['first_name']}}">
+            Last Name: <input type="text" name="last_name" value="{{edit_friend['last_name']}}">
+            Email: <input type="text" name="email" value={{edit_friend['email']}}>
+            <input type="submit" value="Update">
+        </form>
+
+    </body>
+</html>
