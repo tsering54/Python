@@ -1,0 +1,7 @@
+open mamp
+select 'start servers'
+select preference and check the ports they are connected to.
+for msql port, type 8889 
+open workbench
+open the twitter schema(it should be bolded)
+in query type - select * from tweets 
