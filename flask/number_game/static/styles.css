@@ -1,0 +1,31 @@
+body{
+    text-align: center;
+}
+
+div.box{
+    height: 150px;
+    width: 150px;
+    border-style: solid;
+    display: inline-block;
+}
+.low{
+    height: 150px;
+    width: 150px;
+    border-style: solid;
+    display: inline-block;
+    background-color: red
+}
+.high{
+    height: 150px;
+    width: 150px;
+    border-style: solid;
+    display: inline-block;
+    background-color: yellow
+}
+.correct{
+    height: 150px;
+    width: 150px;
+    border-style: solid;
+    display: inline-block;
+    background-color: green
+}
