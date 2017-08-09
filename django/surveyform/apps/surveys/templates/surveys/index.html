@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>dojo survey</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+    <body>
+
+            <form action='/surveys/process' method='POST'>
+                Your Name: <input type="text" name="name"><br>
+                Dojo Location:
+                <select class="" name="location">
+                    <option value="San Jose">san jose</option>
+                    <option value="San Francisco">san francisco</option>
+                </select> <br>
+                Favorite Language:
+                <select class="" name="language">
+                    <option value="Python">python</option>
+                    <option value="JavaScript">javascript</option>
+                </select> <br>
+                Comment (optional): <br>
+                <textarea name="comment" rows="10" cols="50"></textarea><br>
+                <input type="submit" value="submit">
+            </form>
+    </body>
+</html>

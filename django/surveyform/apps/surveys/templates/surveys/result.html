@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>user info</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+    <body>
+        <div id="header">
+            <p>Thanks for submitting this form {{ request.session.count }} times</p>
+        </div>
+            <h3>Submitted Info</h3>
+            Name: {{ request.session.name }} <br>
+            Dojo Location: {{ request.session.location }} <br>
+            Favorite Language: {{ request.session.language }} <br>
+            Comment: {{ request.session.comment }} <br>
+
+    </body>
+</html>
