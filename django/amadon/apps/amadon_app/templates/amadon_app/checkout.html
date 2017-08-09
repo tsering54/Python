@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Amadon Checkout</title>
+    </head>
+    <body>
+        <h3>Thank you for your business!</h3>
+        {% if request.session.last_transaction %}
+            <p>We charged your credit card for {{request.session.last_transaction}}</p>
+            <p>You have ordered {{request.session.quantity}} items so far and spent {{request.session.total_cost}} with Amadon.com!</p>
+        {% endif %}
+        <a href="/">Go back</a>
+    </body>
+</html>
